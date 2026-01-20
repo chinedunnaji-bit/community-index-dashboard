@@ -17,6 +17,7 @@
     "d3-dsv": "3.0.1"
   },
   "devDependencies": {
+    "@types/d3-dsv": "3.0.2",
     "autoprefixer": "10.4.20",
     "typescript": "5.9.2",
     "@types/node": "22.10.2",
