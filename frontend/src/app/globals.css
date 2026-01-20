@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at top left, rgba(245, 158, 11, 0.15), transparent 45%),
+    radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.2), transparent 55%),
+    linear-gradient(160deg, #0a0a0a 20%, #0c0c0b 60%, #050505 100%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), serif;
+}

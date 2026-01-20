@@ -1,0 +1,45 @@
+openapi: 3.0.3
+info:
+  title: Community Index API
+  version: 0.1.0
+paths:
+  /api/indicators:
+    get:
+      summary: List indicator types
+      responses:
+        '200':
+          description: OK
+  /api/geo:
+    get:
+      summary: GeoJSON for indicator by year
+      parameters:
+        - in: query
+          name: indicator
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: year
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: OK
+  /api/timeseries:
+    get:
+      summary: Time series for a neighborhood
+      parameters:
+        - in: query
+          name: indicator
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: geo_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
