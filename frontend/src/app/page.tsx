@@ -1,5 +1,14 @@
-import MapView from '../components/MapView'
+import dynamic from 'next/dynamic'
 import TimelineChart from '../components/TimelineChart'
+
+const MapView = dynamic(() => import('../components/MapView'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-[420px] items-center justify-center rounded-xl border border-stone-800 bg-stone-950/60 text-sm text-stone-300 md:h-[520px]">
+      Loading Dallas map…
+    </div>
+  ),
+})
 
 export default function Home() {
   return (
